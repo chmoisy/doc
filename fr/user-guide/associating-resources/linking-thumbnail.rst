@@ -1,73 +1,67 @@
 .. _linking-thumbnail:
 
+Illustration avec un aperçu
+###########################
 
-Illustrating with an overview
-#############################
+Pour aider l'utilisateur à identifier un fiche intéressante, vous pouvez créer
+un aperçu graphique (ou vignette) sous la forme d'une image et l'attacher à la
+fiche de métadonnées. Par exemple, si votre fiche de métadonnées décrit des jeux
+de données géographiques alors l'aperçu graphique pourra être une image de la carte
+avec une légende produite pas un service OGC WMS (Web Map Service).
 
-
-To help the user identify a metadata record of interest, you can create a
-graphic overview (or thumbnail) in the form of an image and attach it to the
-metadata record. For example, if your metadata record describes some geographic
-dataset then the graphic overview could be an image of the map with legend
-produced by an OGC Web Map Service.
-
-You can associate one or more thumbnails with a record.
+Vous pouvez associer une ou plusieurs vignettes à une fiche.
 
 
-Thumbnails are displayed in search results and metadata view:
+Les vignettes sont affichées dans les vues de recherche et de métadonnées:
 
 .. figure:: img/thumb-in-search-results.png
 
 
-From the ``Associated resources`` panel, click on the ``Add a thumbnail`` button
-to open the ``Add an overview to the current metadata`` wizard. Thumbnails can be added
-using 3 approaches:
+Depuis de le panneau ''Ressources associées'', cliquez sur le bouton ''Ajouter une vignette''
+pour ouvrir l'assistant "d'ajout d'aperçu à la métadonnée". Les vignettes peuvent être ajoutées
+de trois façons : 
 
 
+Liaison d'une vignette avec une URL
+-----------------------------------
 
-Linking a thumbnail with a URL
-------------------------------
-
-When the thumbnail is available as an image on the web, it could be directly linked
-to the metadata record. Add an optional description to describe the image:
+Quand la vignette est disponible comme image sur le web, elle peut être liée directement
+à la ficher de métadonnées. Ajouter une description facultative pour décrire l'image : 
 
 .. figure:: img/thumb.png
 
-You can link as many images as you want. Images associated in this mode, should
-be publicly accessible on the web if you want the thumbnails to be displayed properly
-even if that metadata record get harvested by other catalogs.
+Vous pouvez lier autant d'images que vous le souhaitez. Les images associées dans ce mode
+doivent accessibles publiquement sur le web si vous voulez que les vignettes soient affichées
+correctement même si les fiches de métadonnées sont récoltées par d'autre catalogues.
 
 
-Uploading a thumbnail
----------------------
+Dépôt d'une vignette
+--------------------
 
-Only 2 thumbnails can be attached to a record and uploaded to the catalog.
-Optionnaly a small thumbnail can be created automatically when uploading a large image.
+Seules deux vignettes peuvent être rattachées à une fiche et déposées sur le catalogue.
+De manière optionnelle, une petite vignette peut être créée automatiquement lors du 
+dépôt d'une grande image.
 
-
-The following image formats are supported:
+Les formats d'image suivants sont supportés:
 
  - GIF,
  - PNG
  - JPEG
 
 
-
-Choose a file on your computer or drag&drop a file on the popup.
-Click ``Add a thumbnail`` to trigger the upload.
+Choisissez un fichier sur votre ordinateur ou glissez&déposer un fichier sur la fenêtre
+pop-up. Cliquez sur "Ajouter une vignette" pour déclencher le dépôt.
 
 
 .. _linking-thumbnail-from-wms:
 
 
-Generating a thumbnail using WMS layers
----------------------------------------
+Génération d'une vignette en utilisant des couches WMS
+------------------------------------------------------
 
-
-If you have registered a WMS layer in the current metadata record (see :ref:`linking-wms-layer`),
-a thumbnail can be generated using it on top of the base layer map.
-Choose the ``Create thumbnail`` tab and choose the area to be print on the
-thumbnail.
+Si vous avez enregistré une couche WMS dans la fiche de métadonnée actuelle (voir :ref:`linking-wms-layer`),
+une vignette peut être générée l'utilisant par dessus la couche cartographique de base.
+Sélectionner l'onglet ''créer une vignette" et choisir la zone à imprimer sur la vignette.
 
 
 .. figure:: img/thumbprint.png
