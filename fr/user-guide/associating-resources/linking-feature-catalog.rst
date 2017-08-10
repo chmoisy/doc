@@ -1,18 +1,16 @@
 .. _linking-feature-catalog:
 
-Describing attributes table in a feature Catalog
-################################################
+Description d'une table d'attributs dans un catalogue de propriétés
+###################################################################
 
 
-A feature catalog describes the data model of the dataset with the list
-of tables, attributes, definitions, list of values, ... Feature catalogs
-are described using the ISO19110 standards.
+Un catalogue de propriétés décrit le modèle de données du jeu de données
+avec la liste de tables, d'attributs, définitions, liste de valeurs, etc.
+Les catalogues de propriétés sont décrits en utilisant le standard ISO19110.
 
-
-Click on ``Link to a feature catalog`` to open the record selector listing
-all feature catalog described in the catalog. Choose one and submit to associate
-the 2 document.
-
+Cliquez sur "Lien vers un catalogue de propriétés" pour ouvrir le sélecteur de fiches
+qui affiche tous les catalogues de propriétés décrits dans le catalogue. En sélectionner
+un et cliquer sur Soumettre pour associer les deux documents.
 
 
 .. figure:: img/feature.png
