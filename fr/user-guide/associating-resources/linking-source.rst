@@ -1,5 +1,5 @@
 .. _linking-source:
 
-Referencing sources of a dataset
-################################
+Référencer les sources d'un jeu de données
+##########################################
 
