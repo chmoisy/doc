@@ -1,62 +1,56 @@
 .. _linking-online-resources:
 
-Linking website, web services, ... using URL
-############################################
+Lier des sites, services web, etc. en utilisant une URL
+#######################################################
 
-This section applies mainly to ISO19139 records and partially
-to Dublin Core (ie. only documents can be associated in Dublin Core) standards.
-
+Cette section s'applique principalement aux fiches ISO19139 et partiellement 
+aux standards Dublin Core (seuls des documents peuvent être associés dans Dublin Core)
 
 .. _linking-online-resources-doc:
 
-Linking a document
-------------------
+Lier un document
+----------------
 
-2 approaches can be used to link documents:
+Deux approches peuvent être utilisées pour lier des documents :
+- en fournissant une URL
 
-- by providing a URL
+- en déposant un document
 
-- by uploading a document
-
-
-To add a new one, click on the + caret button then ``Add an online resource``
-button or, if alreay one exists, just click on the title of the ``Online resources``.
-
+Pour ajouter un nouveau document, cliquez sur le bouton d'ajout + puis sur le bouton
+"Ajouter une ressource en ligne" ou, si une existe déjà, cliquez juste sur le titre 
+des "Ressource en ligne"
 
 
 .. figure:: img/addonlinesrc.png
 
+Pour lier une URL, remplir les propriétés suivantes:
 
-To link a URL, set the following properties:
-
-- ``Protocol`` to describe the type of document attached (``Web address (URL)`` is the default)
-- ``Linkage`` to point to the target document. It can be any type of links like http://, ftp://, file:///, ...
-- ``Name`` is optional and provides a label for making an hyperlink
-- ``Description`` is optional and provides more details about the link
-
+- ``Protocole`` pour décrire le type de document attaché  (``adresse web (URL)`` par défaut)
+- ``Lien`` pour pointer sur le document cible. Cela peut être n'importe quel type de lien comme http://, ftp://, file:///, ...
+- ``Nom`` est optionnel et fournit une étiquette pour la création d'un hyperlien
+- ``Description`` est optionnel et fournit plus de détails sur le lien
 
 
-To upload a document, switch to the ``Upload`` tab and choose a document,
-or drag and drop it in the pop up. In that case, the protocol is hidden
-and is set to ``WWW:DOWNLOAD``.
+Pour déposer un document, basculer vers l'ongle "Téléversement" et choisir un document ou glissez/déposez le dans la fenêtre pop-up. Dans ce cas, le protocole est caché et est mis à "WWW:DOWNLOAD"
 
 
 .. figure:: img/addonlinesrcup.png
 
 
-Depending on your needs, more specific links could be added and will
-be associated to different actions and display in the applications.
+Selon vos besoins, des liens plus spécifiques peuvent être ajoutées 
+et seront associés à différents actions et affichages dans l'application.
 
 
 .. _linking-wms-layer:
 
-Linking a WMS layer
+Lier une couche WMS
 -------------------
 
+Afin de pouvoir visualiser une fiche dans le visualiseur de carte, il est 
+pertinent d'ajouter une référence à un ou plusieurs services WMS publiant
+le jeu de données. Une ressource en ligne est codée en utilisant ce qui suit
+en ISO19139:
 
-To be able to view a record on the map viewer, it may be relevant to add a
-reference to one or more WMS services publishing the dataset. An online
-resource is encoded using the following in ISO19139:
 
 .. code-block:: xml
 
@@ -80,13 +74,11 @@ resource is encoded using the following in ISO19139:
 
 
 
-
-To add a WMS layer:
-
-- choose the protocol ``OGC:WMS Web Map Service``,
-- set the URL of the service,
-- then the wizzard query the service to retrieve the list of layers
-- choose one or more layer in the list or set it manually.
+Pour ajouter une couche WMS:
+- choisir le protocle ``OGC:WMS Web Map Service``,
+- remplir l'URL du service,
+- puis l'assistant de requête du service pour récupérer la liste de couches
+- choisir une ou plusieurs couches de la liste ou remplir le champ manuellement
 
 
 
@@ -96,42 +88,42 @@ To add a WMS layer:
 .. _linking-online-resources-georesource:
 
 
-Linking a database table or a GIS file on the network
------------------------------------------------------
+Lier une table de base données ou un fichier SIG sur le réseau
+--------------------------------------------------------------
 
-To reference a GIS file or a database table, user can upload or link to a that resource
-(see :ref:`linking-online-resources-doc`). The type of protocol depends on the type of
-resource associated:
+Pour référencer un fichier SIG ou une table de base de données, l'utilisateur peut déposer 
+un fichier ou créer un lien vers cette ressource (voir :ref:`linking-online-resources-doc`). 
+Le type de protcole dépend du type de ressource associée:
 
-
-===================== ==============================================================================================================================================
-Type of resource      Vector file uploaded (eg. zipped Shapefile)
-===================== ==============================================================================================================================================
-URL                   File URL created after upload on the catalog. eg. http://localhost:8080/geonetwork/srv/eng/resources.get?id=1631&fname=CCM.zip&access=private
-Protocol              WWW:DOWNLOAD
-Name                  File name (readonly)
-===================== ==============================================================================================================================================
 
 ===================== ==============================================================================================================================================
-Type of resource      Vector file on the network
+Type de ressource     Fichier vectoriel déposé (ex :fichier Shapefile zippé)
 ===================== ==============================================================================================================================================
-URL                   File path. eg. file:///shared/geodata/world/hydrology/rivers.shp
-Protocol              FILE:GEO or FILE:RASTER
-Name                  File description
+URL                   URL du fichier créée après dépôt sur le catalogue. ex: http://localhost:8080/geonetwork/srv/eng/resources.get?id=1631&fname=CCM.zip&access=private
+Protocole             WWW:DOWNLOAD
+Nom                   Nom du fichier (lecture seule)
 ===================== ==============================================================================================================================================
 
 ===================== ==============================================================================================================================================
-Type of resource      Vector (Table PostGIS)
+Type de ressource      Fichier vectoriel sur le réseau
 ===================== ==============================================================================================================================================
-URL                   jdbc:postgresql://localhost:5432/login:password@db
-Protocol              DB:POSTGIS
-Name                  Table name
+URL                   Chemin de fichier, ex: file:///shared/geodata/world/hydrology/rivers.shp
+Protocole             FILE:GEO ou FILE:RASTER
+Nom                   Description du fichier
+===================== ==============================================================================================================================================
+
+===================== ==============================================================================================================================================
+Type de ressource     Vecteur (Table PostGIS)
+===================== ==============================================================================================================================================
+URL                   jdbc:postgresql://serveur:port/login:password@db
+Protocole             DB:POSTGIS
+Nom                   Nom de la table
 ===================== ==============================================================================================================================================
 
 
-When having information about the database or file on the local network, it may
-be relevant to hide those informations for public users
-(see :ref:`restricting-information-to-metadata-sections`).
+Quand vous disposez des informations sur la base de données ou du fichier sur le 
+réseau, il est pertinent de cacher ces informations aux utilisateurs publiques
+(voir :ref:`restricting-information-to-metadata-sections`).
 
 
 .. todo:: Add doc & link to geopublisher
