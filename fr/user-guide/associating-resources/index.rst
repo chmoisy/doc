@@ -3,25 +3,24 @@
 Associer des ressources
 #######################
 
-A record can be associated with different types of resources using the
-associated resource panel. This section describes how it works.
+Une fiche peut être associée à différents types de ressources en utilisant 
+le panneau des ressources associées. Cette section en décrit le fonctionnement.
 
-
-In order to add or edit associated resources, open the editor.
-On the top right, manage associated resources with the wizzard panel.
+Afin d'ajouter ou d'éditer des ressources associées, ouvrez l'éditeur.
+En haut à droite, gérer les ressources associées avec l'assitant.
 
 .. figure:: img/onlinesrc.png
 
+Cet assistant fournit un accès pour créer ou supprimer facilement des ressources
+associées. Une liste des ressources actuellement attachées, regroupées par type, 
+est aussi fournie.
 
-This wizard provides access to easily create or delete associated resources. A
-list of currently attached resources grouped by types is also provided.
-
-To add a new online resource, click on the top + caret.
+Pour ajouter une nouvelle ressource en ligne, cliquez sur le signe d'ajout + du haut
 
 .. figure:: img/addresources.png
 
 
-Different types of resources can be associated:
+Différents types de ressources peuvent être associées:
 
 
 .. toctree::
