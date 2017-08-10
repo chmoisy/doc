@@ -1,7 +1,7 @@
 .. _linking-others:
 
-Other types of resources (eg. sensor, publication)
-##################################################
+Autres types de ressources (ex: capteurs, publications)
+#######################################################
 
 
 .. todo:: Add aggregates details
